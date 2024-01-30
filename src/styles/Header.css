@@ -1,0 +1,11 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.header-name {
+  font-family: PP Neue Montreal Bold;
+  mix-blend-mode: darken;
+}
