@@ -3,7 +3,7 @@
   width: 100%;
   padding: 0.5rem 0.5rem;
   box-shadow: inset 0 0 0 0 black;
-
+  text-transform: uppercase;
   margin: 0 -0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -12,10 +12,17 @@
   /* border-bottom: 0.4rem solid black; */
   color: #e1dfdd;
   box-shadow: inset 100vw 0 0 0 black;
+  cursor: pointer;
 }
 
 .menu-item {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: start;
+}
+
+.menu-no {
+  font-size: 0.8rem;
+  font-family: PP Neue Montreal book;
 }

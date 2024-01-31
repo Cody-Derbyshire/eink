@@ -1,57 +1,27 @@
 import '../styles/List.css';
 import { useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
+import ListItem from './ListItem';
 
 const List = () => {
-  const [index, setIndex] = useState(0);
-
   const items = [
     { name: 'projects' },
     { name: 'gallery' },
     { name: 'branding' },
     { name: 'furniture' },
     { name: 'products' },
-    { name: 'costume' },
     { name: 'contact' },
   ];
 
-  const handleHover = (i) => {
-    setIndex(i);
-  };
-
-  const listItems = items.map((item, i) => {
-    return (
-      <>
-        <div className='menu-item' key={index}>
-          <h1 className='li-item' onMouseEnter={() => handleHover(i)}>
-            {item.name}
-          </h1>
-        </div>
-      </>
-    );
-  });
-
   return (
     <>
-      {listItems}
-      {/* <div className='menu-item'>
-        <h1
-          className='li-item'
-          onMouseEnter={() => (setActive = 'projects')}
-          onMouseLeave={() => (setActive = '')}
-        >
-          projects
-        </h1>
-        {active === 'projects' ? (
-          <span className='icon material-symbols-outlined'>gesture</span>
-        ) : null}
-      </div>
-
-      <h1 className='li-item'>branding</h1>
-      <h1 className='li-item'>furniture</h1>
-      <h1 className='li-item'>products</h1>
-      <h1 className='li-item'>costume</h1>
-      <h1 className='li-item'>contact</h1> */}
+      {/* {listItems} */}
+      <ListItem name={items[0].name} number={1} />
+      <ListItem name={items[1].name} number={2} />
+      <ListItem name={items[2].name} number={3} />
+      <ListItem name={items[3].name} number={4} />
+      <ListItem name={items[4].name} number={5} />
+      <ListItem name={items[5].name} number={6} />
     </>
   );
 };

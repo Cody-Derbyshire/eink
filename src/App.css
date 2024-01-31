@@ -24,6 +24,7 @@ h1 {
   display: flex;
   justify-content: start;
   padding: 5rem 1rem;
+  overflow: hidden;
 }
 
 .hero {
@@ -32,11 +33,13 @@ h1 {
   height: 100vh;
   width: fit-content;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .hero-img {
   width: 80vw;
   height: fit-content;
+  max-width: 30rem;
 }
 
 .hero-text {
@@ -48,10 +51,12 @@ h1 {
 .dd-wrapper {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .darr {
   font-size: 4rem;
+  width: min-content;
 }
 
 .prog-bar {
@@ -70,7 +75,17 @@ h1 {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 1rem 1rem;
+}
+
+.img-hscroll {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  overflow-x: scroll;
 }
 
 .overlay {
