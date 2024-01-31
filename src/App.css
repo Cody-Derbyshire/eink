@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
 h1 {
   font-family: PP Neue Montreal Medium;
   font-size: var(--h1-size);
@@ -23,7 +32,7 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: start;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
   overflow: hidden;
 }
 

@@ -1,3 +1,13 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
 .header {
   position: fixed;
   top: 0;
@@ -13,6 +23,21 @@
   mix-blend-mode: darken;
 }
 
-.menu-btn {
-  font-family: PP Neue Montreal Bold;
+.rs-wrapper {
+  text-align: end;
+}
+
+.page-btn {
+  font-family: PP Neue Montreal Medium;
+  text-transform: uppercase;
+}
+
+.back-btn {
+  font-family: PP Neue Montreal Book;
+  text-transform: uppercase;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

@@ -44,15 +44,6 @@
 }
 
 @font-face {
-  font-family: 'PP Neue Montreal SemiBold italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('PP Neue Montreal SemiBold italic'),
-    url('./assets/fonts/ppneue/ppneuemontreal-semibolditalic.woff')
-      format('woff');
-}
-
-@font-face {
   font-family: 'PP Neue Montreal Bold';
   font-style: normal;
   font-weight: normal;
