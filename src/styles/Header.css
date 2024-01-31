@@ -3,9 +3,16 @@
   top: 0;
   z-index: 1;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header-name {
   font-family: PP Neue Montreal Bold;
   mix-blend-mode: darken;
+}
+
+.menu-btn {
+  font-family: PP Neue Montreal Bold;
 }
