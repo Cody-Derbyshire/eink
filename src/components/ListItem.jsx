@@ -27,10 +27,10 @@ const ListItem = ({
         ) : usedFor === 'projects' ? (
           <>
             <a href={extLink} className='menu-item'>
-              <h1 className='li-item'>
+              <h1 className='li-item smaller-h1'>
                 <div>
                   <span className='menu-no'>{`0${number}`}</span> {name}
-                  <span className='icon material-symbols-outlined'>
+                  <span className='icon smaller-h1 material-symbols-outlined'>
                     arrow_outward
                   </span>
                 </div>

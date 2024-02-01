@@ -9,7 +9,7 @@ const HorFade = ({ children }) => {
       transition={{ duration: 0.6 }}
       variants={{
         visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: 50 },
+        hidden: { opacity: 0, x: 20 },
       }}
     >
       {children}
