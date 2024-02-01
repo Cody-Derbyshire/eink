@@ -76,19 +76,29 @@
   ],
   "furniture": [
     {
-      "src": "https://i.ibb.co/6Wt7rYH/layouts-armchair.webp"
+      "src": "https://i.ibb.co/6Wt7rYH/layouts-armchair.webp",
+      "name": "midcentury armchair",
+      "alt": "cnc plywood flatpack"
     },
     {
-      "src": "https://i.ibb.co/TwZHRnF/layouts-bedsidetable.webp"
+      "src": "https://i.ibb.co/TwZHRnF/layouts-bedsidetable.webp",
+      "name": "bedside table",
+      "alt": "cnc plywood flatpack"
     },
     {
-      "src": "https://i.ibb.co/Fs0tb96/layouts-couch.webp"
+      "src": "https://i.ibb.co/Fs0tb96/layouts-couch.webp",
+      "name": "everyday couch",
+      "alt": "everyday product construction"
     },
     {
-      "src": "https://i.ibb.co/ZmSK9yB/layouts-plamp.webp"
+      "src": "https://i.ibb.co/ZmSK9yB/layouts-plamp.webp",
+      "name": "kumiko lamp",
+      "alt": "lasercut + everyday design"
     },
     {
-      "src": "https://i.ibb.co/829k3Rh/layouts-recordstand.webp"
+      "src": "https://i.ibb.co/829k3Rh/layouts-recordstand.webp",
+      "name": "record player stand",
+      "alt": "cnc plywood flatpack"
     }
   ],
   "products": [

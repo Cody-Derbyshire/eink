@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import images from '../assets/images.json';
 import ListItem from '../components/ListItem';
 import { useState } from 'react';
-import Modal from 'react-modal';
 import RevHorFade from '../functions/RevHorFade';
 
 const Branding = () => {
@@ -110,7 +109,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth1}%` }}>
-          <img className='modal-img' src={branding[0].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[0].src}
+            alt={branding[0].alt}
+          />
           {modalWidth1 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -131,7 +134,11 @@ const Branding = () => {
           ) : null}
         </div>
         <div className='modal' style={{ width: `${modalWidth2}%` }}>
-          <img className='modal-img' src={branding[1].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[1].src}
+            alt={branding[1].alt}
+          />
           {modalWidth2 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -167,7 +174,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth3}%` }}>
-          <img className='modal-img' src={branding[2].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[2].src}
+            alt={branding[2].alt}
+          />
           {modalWidth3 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -204,7 +215,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth4}%` }}>
-          <img className='modal-img' src={branding[3].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[3].src}
+            alt={branding[3].alt}
+          />
           {modalWidth4 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -244,7 +259,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth5}%` }}>
-          <img className='modal-img' src={branding[4].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[4].src}
+            alt={branding[4].alt}
+          />
           {modalWidth5 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -265,7 +284,11 @@ const Branding = () => {
           ) : null}
         </div>
         <div className='modal' style={{ width: `${modalWidth6}%` }}>
-          <img className='modal-img' src={branding[5].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[5].src}
+            alt={branding[5].alt}
+          />
           {modalWidth6 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -301,7 +324,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth7}%` }}>
-          <img className='modal-img' src={branding[6].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[6].src}
+            alt={branding[6].alt}
+          />
           {modalWidth7 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -338,7 +365,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth8}%` }}>
-          <img className='modal-img' src={branding[7].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[7].src}
+            alt={branding[7].alt}
+          />
           {modalWidth8 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -375,7 +406,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth9}%` }}>
-          <img className='modal-img' src={branding[8].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[8].src}
+            alt={branding[8].alt}
+          />
           {modalWidth9 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -412,7 +447,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth10}%` }}>
-          <img className='modal-img' src={branding[9].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[9].src}
+            alt={branding[9].alt}
+          />
           {modalWidth10 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -449,7 +488,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth11}%` }}>
-          <img className='modal-img' src={branding[10].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[10].src}
+            alt={branding[10].alt}
+          />
           {modalWidth11 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
@@ -486,7 +529,11 @@ const Branding = () => {
           </RevHorFade>
         </div>
         <div className='modal' style={{ width: `${modalWidth12}%` }}>
-          <img className='modal-img' src={branding[11].src} alt='' />
+          <img
+            className='modal-img'
+            src={branding[11].src}
+            alt={branding[11].alt}
+          />
           {modalWidth12 !== 0 ? (
             <div className='modal-actions'>
               <div className='action-wrapper' onClick={closeAllModals}>
