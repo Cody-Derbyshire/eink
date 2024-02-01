@@ -2,10 +2,16 @@
   border-bottom: 0.2rem solid black;
   width: 100%;
   padding: 0.5rem 0.5rem;
-  box-shadow: inset 0 0 0 0 black;
   text-transform: uppercase;
   margin: 0 -0.25rem;
+  box-shadow: inset 0 0 0 0 black;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.smaller-h1 {
+  font-size: 1.5rem;
 }
 
 .li-item:hover {
@@ -15,8 +21,21 @@
   cursor: pointer;
 }
 
+.li-item-nohvr {
+  border-bottom: 0.2rem solid black;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  text-transform: uppercase;
+  margin: 0 -0.25rem;
+  box-shadow: inset 0 0 0 0 black;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
 .menu-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   align-items: start;
@@ -25,4 +44,36 @@
 .menu-no {
   font-size: 0.8rem;
   font-family: PP Neue Montreal book;
+}
+
+.list-desc {
+  text-transform: uppercase;
+}
+
+.num-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.num-link {
+  text-decoration: underline;
+}
+
+.num-link:hover {
+  cursor: pointer;
+}
+
+.list-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 1rem;
+  align-items: start;
+}
+
+@media screen and (min-width: 35rem) {
+  .smaller-h1 {
+    font-size: 2.4rem;
+  }
 }
