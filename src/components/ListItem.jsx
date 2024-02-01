@@ -45,12 +45,12 @@ const ListItem = ({
                 <div>
                   <span className='menu-no'>{`0${number}`}</span> {name}
                 </div>
-                <div className='num-wrapper'>
+                {/* <div className='num-wrapper'>
                   <h1 className='smaller-h1 num-link'>{num1}</h1>
                   {num2 ? (
                     <h1 className='smaller-h1 num-link'>{num2}</h1>
                   ) : null}
-                </div>
+                </div> */}
               </h1>
             </div>
             <p className='list-desc'>{desc}</p>

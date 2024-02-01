@@ -9,6 +9,19 @@ import RevHorFade from '../functions/RevHorFade';
 const Branding = () => {
   const branding = images.branding;
 
+  const [modalWidth1, setModalWidth1] = useState(0);
+  const [modalWidth2, setModalWidth2] = useState(0);
+  const [modalWidth3, setModalWidth3] = useState(0);
+  const [modalWidth4, setModalWidth4] = useState(0);
+  const [modalWidth5, setModalWidth5] = useState(0);
+  const [modalWidth6, setModalWidth6] = useState(0);
+  const [modalWidth7, setModalWidth7] = useState(0);
+  const [modalWidth8, setModalWidth8] = useState(0);
+  const [modalWidth9, setModalWidth9] = useState(0);
+  const [modalWidth10, setModalWidth10] = useState(0);
+  const [modalWidth11, setModalWidth11] = useState(0);
+  const [modalWidth12, setModalWidth12] = useState(0);
+
   const closeAllModals = () => {
     setModalWidth1(0);
     setModalWidth2(0);
@@ -23,19 +36,6 @@ const Branding = () => {
     setModalWidth11(0);
     setModalWidth12(0);
   };
-
-  const [modalWidth1, setModalWidth1] = useState(0);
-  const [modalWidth2, setModalWidth2] = useState(0);
-  const [modalWidth3, setModalWidth3] = useState(0);
-  const [modalWidth4, setModalWidth4] = useState(0);
-  const [modalWidth5, setModalWidth5] = useState(0);
-  const [modalWidth6, setModalWidth6] = useState(0);
-  const [modalWidth7, setModalWidth7] = useState(0);
-  const [modalWidth8, setModalWidth8] = useState(0);
-  const [modalWidth9, setModalWidth9] = useState(0);
-  const [modalWidth10, setModalWidth10] = useState(0);
-  const [modalWidth11, setModalWidth11] = useState(0);
-  const [modalWidth12, setModalWidth12] = useState(0);
 
   const handleOpenModal1 = () => {
     closeAllModals();
@@ -111,9 +111,45 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth1}%` }}>
           <img className='modal-img' src={branding[0].src} alt='' />
+          {modalWidth1 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[0].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
         <div className='modal' style={{ width: `${modalWidth2}%` }}>
           <img className='modal-img' src={branding[1].src} alt='' />
+          {modalWidth2 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[1].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
         <div className='list-item-wrapper'>
           <ListItem
@@ -132,6 +168,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth3}%` }}>
           <img className='modal-img' src={branding[2].src} alt='' />
+          {modalWidth3 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[2].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -151,6 +205,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth4}%` }}>
           <img className='modal-img' src={branding[3].src} alt='' />
+          {modalWidth4 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[3].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -173,9 +245,45 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth5}%` }}>
           <img className='modal-img' src={branding[4].src} alt='' />
+          {modalWidth5 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[4].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
         <div className='modal' style={{ width: `${modalWidth6}%` }}>
           <img className='modal-img' src={branding[5].src} alt='' />
+          {modalWidth6 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[5].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
         <div className='list-item-wrapper'>
           <ListItem
@@ -194,6 +302,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth7}%` }}>
           <img className='modal-img' src={branding[6].src} alt='' />
+          {modalWidth7 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[6].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -213,6 +339,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth8}%` }}>
           <img className='modal-img' src={branding[7].src} alt='' />
+          {modalWidth8 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[7].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -232,6 +376,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth9}%` }}>
           <img className='modal-img' src={branding[8].src} alt='' />
+          {modalWidth9 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[8].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -251,6 +413,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth10}%` }}>
           <img className='modal-img' src={branding[9].src} alt='' />
+          {modalWidth10 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[9].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -270,6 +450,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth11}%` }}>
           <img className='modal-img' src={branding[10].src} alt='' />
+          {modalWidth11 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[10].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className='list-item-wrapper'>
@@ -289,6 +487,24 @@ const Branding = () => {
         </div>
         <div className='modal' style={{ width: `${modalWidth12}%` }}>
           <img className='modal-img' src={branding[11].src} alt='' />
+          {modalWidth12 !== 0 ? (
+            <div className='modal-actions'>
+              <div className='action-wrapper' onClick={closeAllModals}>
+                <h1 className='smaller-h1'>close</h1>
+                <span className='smaller-h1 icon material-symbols-outlined'>
+                  close
+                </span>
+              </div>
+              <a href={branding[11].src} target='_blank' rel='noreferrer'>
+                <div className='action-wrapper'>
+                  <h1 className='smaller-h1'>open</h1>
+                  <span className='smaller-h1 icon material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </a>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
