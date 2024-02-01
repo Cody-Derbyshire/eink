@@ -103,16 +103,24 @@
   ],
   "products": [
     {
-      "src": "https://i.ibb.co/3Cm2J5c/layouts-dumbpad.webp"
+      "src": "https://i.ibb.co/3Cm2J5c/layouts-dumbpad.webp",
+      "name": "dumbpad acrylic case",
+      "alt": "product design"
     },
     {
-      "src": "https://i.ibb.co/Jvzvjws/layouts-dumbpad1.webp"
+      "src": "https://i.ibb.co/Jvzvjws/layouts-dumbpad1.webp",
+      "name": "dumbpad acrylic case",
+      "alt": "product design"
     },
     {
-      "src": "https://i.ibb.co/MhVcmtS/layouts-walker1.webp"
+      "src": "https://i.ibb.co/MhVcmtS/layouts-walker1.webp",
+      "name": "walker no.1",
+      "alt": "art toy"
     },
     {
-      "src": "https://i.ibb.co/FJcxxkJ/layouts-walker2.webp"
+      "src": "https://i.ibb.co/FJcxxkJ/layouts-walker2.webp",
+      "name": "walker no.2",
+      "alt": "art toy"
     }
   ]
 }
