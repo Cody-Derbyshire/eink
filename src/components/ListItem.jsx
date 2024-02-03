@@ -26,7 +26,12 @@ const ListItem = ({
           </Link>
         ) : usedFor === 'projects' ? (
           <>
-            <a href={extLink} className='menu-item'>
+            <a
+              href={extLink}
+              target='_blank'
+              rel='noreferrer'
+              className='menu-item'
+            >
               <h1 className='li-item smaller-h1'>
                 <div>
                   <span className='menu-no'>{`0${number}`}</span> {name}
