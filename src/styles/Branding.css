@@ -25,6 +25,7 @@
   justify-content: space-around;
   width: 100%;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .action-wrapper {
