@@ -43,8 +43,6 @@ const Furniture = () => {
     modalWidth5 === 100 ? setModalWidth5(0) : setModalWidth5(100);
   };
 
-  console.log(furniture[1].src);
-
   return (
     <>
       <div className='overlay'></div>
