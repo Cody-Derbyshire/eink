@@ -1,6 +1,7 @@
 import '../styles/Contact.css';
 import Header from '../components/Header';
 import ListItem from '../components/ListItem';
+import VertFade from '../functions/VertFade';
 
 const meagain = './src/assets/images/me-again.jpg';
 const cdcv = './src/assets/CD-CV-2024.pdf';
@@ -8,7 +9,7 @@ const cdcv = './src/assets/CD-CV-2024.pdf';
 const Contact = () => {
   const CVDownload = () => {
     return (
-      <a href={cdcv} download='CodyDerbyshire_CV'>
+      <a href={cdcv} className='download' download='CodyDerbyshire_CV'>
         download
       </a>
     );
@@ -18,7 +19,13 @@ const Contact = () => {
     <>
       <div className='overlay'></div>
       <Header page={'Contact'} back={'y'} />
+
       <div className='list'>
+        <VertFade>
+          <div className='img-wrapper'>
+            <img className='me-img' src={meagain} alt='' />
+          </div>
+        </VertFade>
         <ListItem
           name={'call me'}
           number={1}
