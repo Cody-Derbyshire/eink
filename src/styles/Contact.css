@@ -1,0 +1,11 @@
+.img-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+.me-img {
+  width: 80vw;
+  max-width: 30rem;
+}
