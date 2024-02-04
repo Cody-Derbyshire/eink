@@ -8,7 +8,7 @@ import RevVertFade from '../functions/RevVertFade';
 
 const me = './src/assets/images/me.jpg';
 const alsome = './src/assets/images/also-me.jpg';
-const stillme = './src/assets/images/still-me.jpg';
+const stillme = './images/still-me.jpg';
 
 function Landing() {
   return (

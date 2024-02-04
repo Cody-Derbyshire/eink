@@ -1,9 +1,10 @@
 import '../styles/Contact.css';
 import Header from '../components/Header';
 import ListItem from '../components/ListItem';
+import VertFade from '../functions/VertFade';
 
-const meagain = './src/assets/images/me-again.jpg';
-const cdcv = './src/assets/CD-CV-2024.pdf';
+const meagain = './images/me-again.jpg';
+const cdcv = './CD-CV-2024.pdf';
 
 const Contact = () => {
   const CVDownload = () => {
@@ -19,6 +20,11 @@ const Contact = () => {
       <div className='overlay'></div>
       <Header page={'Contact'} back={'y'} />
       <div className='list'>
+        <VertFade>
+          <div className='img-wrapper'>
+            <img className='me-img' src={meagain} alt='' />
+          </div>
+        </VertFade>
         <ListItem
           name={'call me'}
           number={1}
