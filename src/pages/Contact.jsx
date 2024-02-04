@@ -9,7 +9,7 @@ const cdcv = './CD-CV-2024.pdf';
 const Contact = () => {
   const CVDownload = () => {
     return (
-      <a href={cdcv} download='CodyDerbyshire_CV'>
+      <a href={cdcv} className='download' download='CodyDerbyshire_CV'>
         download
       </a>
     );
@@ -19,6 +19,7 @@ const Contact = () => {
     <>
       <div className='overlay'></div>
       <Header page={'Contact'} back={'y'} />
+
       <div className='list'>
         <VertFade>
           <div className='img-wrapper'>

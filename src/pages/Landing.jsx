@@ -20,8 +20,7 @@ function Landing() {
         <div className='hero'>
           <HorFade>
             <p className='hero-text'>
-              I BUILD STUNNING FRONT ENDS <br /> AND CRAFT BEAUTIFUL BRAND
-              IDENTITIES
+              I BUILD STUNNING FRONT ENDS <br /> AND BEAUTIFUL BRAND IDENTITIES
             </p>
           </HorFade>
           <HorFade>
