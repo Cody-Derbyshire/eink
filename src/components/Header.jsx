@@ -10,7 +10,9 @@ const Header = ({ page, back }) => {
     <>
       <div className='header'>
         <motion.div className='prog-bar' style={{ scaleX: scrollYProgress }} />
-        <p className='header-name'>Cody Derbyshire</p>
+        <p className='header-name'>
+          <Link to={'/'}>Cody Derbyshire</Link>
+        </p>
         <div className='rs-wrapper'>
           <p className='page-btn'>{page}</p>
           {back === 'y' ? (
