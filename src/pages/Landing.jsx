@@ -32,27 +32,97 @@ function Landing() {
     return () => window.removeEventListener('resize', updateMedia);
   });
 
+  const [hoveredClass, setHoveredClass] = useState('');
+  const [hoveredEl, setHoveredEl] = useState('');
+
   return (
     <>
       <div className='overlay'></div>
-      <Header />
+      <Header
+        hoveredClass={hoveredClass}
+        hoveredEl={hoveredEl}
+        setHoveredClass={setHoveredClass}
+        setHoveredEl={setHoveredEl}
+      />
 
-      <div className='main'>
+      <div
+        className={`main 
+        ${
+          hoveredClass === `fl-green-sap-blue`
+            ? 'fl-green-bg'
+            : hoveredClass === 'rad-pink-neon-green' || hoveredEl === 'dd-text'
+            ? 'neon-green-bg'
+            : hoveredClass === 'navy-blue-neon-green2' ||
+              hoveredEl === 'hero-text'
+            ? 'navy-blue-bg'
+            : hoveredClass === 'bbc-green-neon-blue'
+            ? 'dark-bluegreen-bg'
+            : hoveredClass === 'yellow-dark-yellow'
+            ? 'yellow-bg'
+            : hoveredClass === 'pink-dark-pink' || hoveredEl === 'intro'
+            ? 'neon-pink-bg'
+            : null
+        }`}
+      >
         <div className='hero'>
           <HorFade>
-            <p className='hero-text'>
+            <p
+              className={`hero-text ${
+                hoveredClass === `fl-green-sap-blue`
+                  ? 'sap-blue-text'
+                  : hoveredClass === 'rad-pink-neon-green' ||
+                    hoveredEl === 'dd-text'
+                  ? 'rad-pink-text'
+                  : hoveredClass === 'navy-blue-neon-green2' ||
+                    hoveredEl === 'hero-text'
+                  ? 'neon-green-text'
+                  : hoveredClass === 'yellow-dark-yellow'
+                  ? 'dark-yellow-text'
+                  : hoveredClass === 'pink-dark-pink' || hoveredEl === 'intro'
+                  ? 'dark-pink-text'
+                  : null
+              }`}
+              onMouseEnter={() => {
+                setHoveredEl('hero-text');
+              }}
+              onMouseLeave={() => {
+                setHoveredEl('');
+              }}
+            >
               I BUILD STUNNING FRONT ENDS <br /> AND CRAFT BEAUTIFUL BRAND
               IDENTITIES
             </p>
           </HorFade>
           <HorFade>
-            <h1 className='intro h1-text'>
+            <h1
+              className={`intro h1-text ${
+                hoveredClass === `fl-green-sap-blue`
+                  ? 'sap-blue-text'
+                  : hoveredClass === 'rad-pink-neon-green' ||
+                    hoveredEl === 'dd-text'
+                  ? 'rad-pink-text'
+                  : hoveredClass === 'navy-blue-neon-green2' ||
+                    hoveredEl === 'hero-text'
+                  ? 'neon-green-text'
+                  : hoveredClass === 'yellow-dark-yellow'
+                  ? 'dark-yellow-text'
+                  : hoveredClass === 'pink-dark-pink' || hoveredEl === 'intro'
+                  ? 'dark-pink-text'
+                  : null
+              }`}
+              onMouseEnter={() => {
+                setHoveredEl('intro');
+              }}
+              onMouseLeave={() => {
+                setHoveredEl('');
+              }}
+            >
               CODY <br /> &rarr; DERBYSHIRE
             </h1>
           </HorFade>
           <VertFade>
             <img
-              className='hero-img'
+              className={`hero-img`}
               src={stillme}
               alt='cody derbyshire hero image'
             />
@@ -69,10 +139,52 @@ function Landing() {
                   hidden: { opacity: 0, y: -100 },
                 }}
               >
-                <h1 className='darr margin-left'>&darr;</h1>
+                <h1
+                  className={`darr margin-left ${
+                    hoveredClass === `fl-green-sap-blue`
+                      ? 'sap-blue-text'
+                      : hoveredClass === 'rad-pink-neon-green' ||
+                        hoveredEl === 'dd-text'
+                      ? 'rad-pink-text'
+                      : hoveredClass === 'navy-blue-neon-green2' ||
+                        hoveredEl === 'hero-text'
+                      ? 'neon-green-text'
+                      : hoveredClass === 'yellow-dark-yellow'
+                      ? 'dark-yellow-text'
+                      : hoveredClass === 'pink-dark-pink' ||
+                        hoveredEl === 'intro'
+                      ? 'dark-pink-text'
+                      : null
+                  }`}
+                >
+                  &darr;
+                </h1>
               </motion.div>
               <HorFade>
-                <h1 className='h1-text dd-text'>
+                <h1
+                  className={`h1-text dd-text ${
+                    hoveredClass === `fl-green-sap-blue`
+                      ? 'sap-blue-text'
+                      : hoveredClass === 'rad-pink-neon-green' ||
+                        hoveredEl === 'dd-text'
+                      ? 'rad-pink-text'
+                      : hoveredClass === 'navy-blue-neon-green2' ||
+                        hoveredEl === 'hero-text'
+                      ? 'neon-green-text'
+                      : hoveredClass === 'yellow-dark-yellow'
+                      ? 'dark-yellow-text'
+                      : hoveredClass === 'pink-dark-pink' ||
+                        hoveredEl === 'intro'
+                      ? 'dark-pink-text'
+                      : null
+                  }`}
+                  onMouseEnter={() => {
+                    setHoveredEl('dd-text');
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredEl('');
+                  }}
+                >
                   DESIGNER <br />
                   <span className='icon material-symbols-outlined'>
                     emergency
@@ -84,7 +196,30 @@ function Landing() {
           ) : (
             <div className='dd-wrapper '>
               <HorFade>
-                <h1 className='h1-text dd-text'>
+                <h1
+                  className={`h1-text dd-text ${
+                    hoveredClass === `fl-green-sap-blue`
+                      ? 'sap-blue-text'
+                      : hoveredClass === 'rad-pink-neon-green' ||
+                        hoveredEl === 'dd-text'
+                      ? 'rad-pink-text'
+                      : hoveredClass === 'navy-blue-neon-green2' ||
+                        hoveredEl === 'hero-text'
+                      ? 'neon-green-text'
+                      : hoveredClass === 'yellow-dark-yellow'
+                      ? 'dark-yellow-text'
+                      : hoveredClass === 'pink-dark-pink' ||
+                        hoveredEl === 'intro'
+                      ? 'dark-pink-text'
+                      : null
+                  }`}
+                  onMouseEnter={() => {
+                    setHoveredEl('dd-text');
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredEl('');
+                  }}
+                >
                   DESIGNER{' '}
                   <span className='icon material-symbols-outlined'>
                     emergency
@@ -103,15 +238,52 @@ function Landing() {
                   hidden: { opacity: 0, y: -100 },
                 }}
               >
-                <h1 className='darr'>&darr;</h1>
+                <h1
+                  className={`darr ${
+                    hoveredClass === `fl-green-sap-blue`
+                      ? 'sap-blue-text'
+                      : hoveredClass === 'rad-pink-neon-green' ||
+                        hoveredEl === 'dd-text'
+                      ? 'rad-pink-text'
+                      : hoveredClass === 'navy-blue-neon-green2' ||
+                        hoveredEl === 'hero-text'
+                      ? 'neon-green-text'
+                      : hoveredClass === 'yellow-dark-yellow'
+                      ? 'dark-yellow-text'
+                      : hoveredClass === 'pink-dark-pink' ||
+                        hoveredEl === 'intro'
+                      ? 'dark-pink-text'
+                      : null
+                  }`}
+                >
+                  &darr;
+                </h1>
               </motion.div>
             </div>
           )}
         </div>
       </div>
 
-      <div className='list'>
-        <List />
+      <div
+        className={`list 
+        ${
+          hoveredClass === `fl-green-sap-blue`
+            ? 'fl-green-bg'
+            : hoveredClass === 'rad-pink-neon-green' || hoveredEl === 'dd-text'
+            ? 'neon-green-bg'
+            : hoveredClass === 'navy-blue-neon-green2' ||
+              hoveredEl === 'hero-text'
+            ? 'navy-blue-bg'
+            : hoveredClass === 'bbc-green-neon-blue'
+            ? 'dark-bluegreen-bg'
+            : hoveredClass === 'yellow-dark-yellow'
+            ? 'yellow-bg'
+            : hoveredClass === 'pink-dark-pink' || hoveredEl === 'intro'
+            ? 'neon-pink-bg'
+            : null
+        }`}
+      >
+        <List hoveredClass={hoveredClass} setHoveredClass={setHoveredClass} />
       </div>
     </>
   );

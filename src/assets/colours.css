@@ -1,0 +1,157 @@
+:root {
+  --fluorescent-green: #96ffbd;
+  --sapphire-blue: #1803a5;
+
+  --radiant-pink: #dc3a79;
+  --neon-green: #b6e696;
+
+  --recess-green: #469e48;
+  --playful-pink: #de418e;
+
+  --neon-green-2: #7ee05f;
+  --navy-blue: #2249ae;
+
+  --dark-bluegreen: #3a5a40;
+  --neon-blue: #00ffa9;
+
+  --dark-green: #2f4b26;
+  --neon-orange: #ff9b29;
+
+  --bbc-green: #20937a;
+  --neon-blue: #00ffa9;
+
+  --yellow: #fdfd96;
+  --dark-yellow: #fb902d;
+
+  --pink: #ffd3e0;
+  --neon-pink: #fd99fa;
+  --dark-pink: #e91e63;
+
+  --green: #b2ff59;
+  --dark-green: #43a047;
+}
+
+/* -------------------------------------------------- */
+
+.fl-green-sap-blue {
+  color: var(--sapphire-blue);
+  border-bottom: 0.2rem solid var(--sapphire-blue) !important;
+  box-shadow: inset 0 0 0 0 var(--sapphire-blue) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+.fl-green-sap-blue-no-border {
+  color: var(--sapphire-blue);
+  box-shadow: inset 0 0 0 0 var(--sapphire-blue) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+.sap-blue-text {
+  color: var(--sapphire-blue);
+  transition: color 0.3s ease-in-out;
+}
+.fl-green-sap-blue:hover {
+  color: var(--fluorescent-green);
+  box-shadow: inset 100vw 0 0 0 var(--sapphire-blue) !important;
+}
+.fl-green-sap-blue-no-border:hover {
+  color: var(--fluorescent-green);
+  box-shadow: inset 100vw 0 0 0 var(--sapphire-blue) !important;
+}
+
+.fl-green-bg {
+  background-color: var(--fluorescent-green);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------- */
+
+.rad-pink-neon-green {
+  color: var(--radiant-pink);
+  border-bottom: 0.2rem solid var(--radiant-pink) !important;
+  box-shadow: inset 0 0 0 0 var(--radiant-pink) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+.rad-pink-text {
+  color: var(--radiant-pink);
+  transition: color 0.3s ease-in-out;
+}
+.rad-pink-neon-green:hover {
+  color: var(--neon-green);
+  box-shadow: inset 100vw 0 0 0 var(--radiant-pink) !important;
+}
+
+.neon-green-bg {
+  background-color: var(--neon-green);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------- */
+
+.navy-blue-neon-green2 {
+  color: var(--neon-green-2);
+  border-bottom: 0.2rem solid var(--neon-green-2) !important;
+  box-shadow: inset 0 0 0 0 var(--neon-green-2) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+
+.neon-green-text {
+  color: var(--neon-green-2);
+  transition: color 0.3s ease-in-out;
+}
+
+.navy-blue-neon-green2:hover {
+  color: var(--navy-blue);
+  box-shadow: inset 100vw 0 0 0 var(--neon-green-2) !important;
+}
+
+.navy-blue-bg {
+  background-color: var(--navy-blue);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------- */
+
+.yellow-dark-yellow {
+  color: var(--dark-yellow);
+  border-bottom: 0.2rem solid var(--dark-yellow) !important;
+  box-shadow: inset 0 0 0 0 var(--dark-yellow) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+.dark-yellow-text {
+  color: var(--dark-yellow);
+  transition: color 0.3s ease-in-out;
+}
+.yellow-dark-yellow:hover {
+  color: var(--yellow);
+  box-shadow: inset 100vw 0 0 0 var(--dark-yellow) !important;
+}
+.yellow-bg {
+  background-color: var(--yellow);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------- */
+
+.pink-dark-pink {
+  color: var(--dark-pink);
+  border-bottom: 0.2rem solid var(--dark-pink) !important;
+  box-shadow: inset 0 0 0 0 var(--dark-pink) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+.dark-pink-text {
+  color: var(--dark-pink);
+  transition: color 0.3s ease-in-out;
+}
+.pink-dark-pink:hover {
+  color: var(--neon-pink);
+  box-shadow: inset 100vw 0 0 0 var(--dark-pink) !important;
+}
+.neon-pink-bg {
+  background-color: var(--neon-pink);
+  transition: background-color 0.3s ease-in-out;
+}

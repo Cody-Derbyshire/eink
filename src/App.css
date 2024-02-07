@@ -76,7 +76,7 @@ h1 {
   left: 0;
   right: 0;
   height: 10px;
-  background: black;
+  background-color: black;
   transform-origin: 0%;
 }
 

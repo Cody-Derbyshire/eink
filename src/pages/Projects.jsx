@@ -1,8 +1,12 @@
 import '../styles/Projects.css';
+import '../assets/colours.css';
 import Header from '../components/Header';
 import ListItem from '../components/ListItem';
+import { useState } from 'react';
 
 const Projects = () => {
+  const [hoveredClass, setHoveredClass] = useState('');
+
   const items = [
     {
       name: 'poke API',
@@ -33,14 +37,26 @@ const Projects = () => {
   return (
     <>
       <div className='overlay'></div>
-      <Header page={'Projects'} back={'y'} />
-      <div className='list'>
+      <Header
+        page={'Projects'}
+        back={'y'}
+        hoveredClass={hoveredClass}
+        setHoveredClass={setHoveredClass}
+      />
+      <div
+        className={`list ${
+          hoveredClass === `fl-green-sap-blue-no-border` ? 'fl-green-bg' : null
+        }`}
+      >
         <ListItem
           name={items[0].name}
           number={1}
           extLink={items[0].url}
           usedFor={'projects'}
           desc={items[0].desc}
+          hoverClass={'fl-green-sap-blue-no-border'}
+          hoveredClass={hoveredClass}
+          setHoveredClass={setHoveredClass}
         />
         <ListItem
           name={items[1].name}
@@ -48,6 +64,9 @@ const Projects = () => {
           extLink={items[1].url}
           usedFor={'projects'}
           desc={items[1].desc}
+          hoverClass={'fl-green-sap-blue-no-border'}
+          hoveredClass={hoveredClass}
+          setHoveredClass={setHoveredClass}
         />
         <ListItem
           name={items[2].name}
@@ -55,6 +74,9 @@ const Projects = () => {
           extLink={items[2].url}
           usedFor={'projects'}
           desc={items[2].desc}
+          hoverClass={'fl-green-sap-blue-no-border'}
+          hoveredClass={hoveredClass}
+          setHoveredClass={setHoveredClass}
         />
         <ListItem
           name={items[3].name}
@@ -62,6 +84,9 @@ const Projects = () => {
           extLink={items[3].url}
           usedFor={'projects'}
           desc={items[3].desc}
+          hoverClass={'fl-green-sap-blue-no-border'}
+          hoveredClass={hoveredClass}
+          setHoveredClass={setHoveredClass}
         />
       </div>
     </>

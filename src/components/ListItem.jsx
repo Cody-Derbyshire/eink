@@ -2,6 +2,8 @@ import { motion, useScroll, stagger } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import VertFade from '../functions/VertFade';
 import HorFade from '../functions/HorFade';
+import { useState } from 'react';
+import '../assets/colours.css';
 
 const ListItem = ({
   name,
@@ -10,15 +12,25 @@ const ListItem = ({
   usedFor,
   extLink,
   desc,
-  num1,
-  num2,
+  hoverClass,
+  hoveredClass,
+  setHoveredClass,
 }) => {
   return (
     <>
       <HorFade>
         {usedFor === 'landing' ? (
-          <Link to={`/${link}`} className='menu-item'>
-            <h1 className='li-item'>
+          <Link
+            to={`/${link}`}
+            className={`menu-item`}
+            onMouseEnter={() => {
+              setHoveredClass(hoverClass);
+            }}
+            onMouseLeave={() => {
+              setHoveredClass('');
+            }}
+          >
+            <h1 className={`li-item ${hoveredClass}`}>
               <div>
                 <span className='menu-no'>{`0${number}`}</span> {name}
               </div>
@@ -31,8 +43,14 @@ const ListItem = ({
               target='_blank'
               rel='noreferrer'
               className='menu-item'
+              onMouseEnter={() => {
+                setHoveredClass(hoverClass);
+              }}
+              onMouseLeave={() => {
+                setHoveredClass('');
+              }}
             >
-              <h1 className='li-item smaller-h1'>
+              <h1 className={`li-item smaller-h1 ${hoveredClass}`}>
                 <div>
                   <span className='menu-no'>{`0${number}`}</span> {name}
                   <span className='icon smaller-h1 material-symbols-outlined'>
@@ -41,7 +59,7 @@ const ListItem = ({
                 </div>
               </h1>
             </a>
-            <p className='list-desc'>{desc}</p>
+            <p className={`list-desc ${hoveredClass}`}>{desc}</p>
           </>
         ) : usedFor === 'branding' ? (
           <>
@@ -50,12 +68,6 @@ const ListItem = ({
                 <div>
                   <span className='menu-no'>{`0${number}`}</span> {name}
                 </div>
-                {/* <div className='num-wrapper'>
-                  <h1 className='smaller-h1 num-link'>{num1}</h1>
-                  {num2 ? (
-                    <h1 className='smaller-h1 num-link'>{num2}</h1>
-                  ) : null}
-                </div> */}
               </h1>
             </div>
             <p className='list-desc'>{desc}</p>
