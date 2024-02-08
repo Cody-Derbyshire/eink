@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const HorFade = ({ children }) => {
   return (
     <motion.div
-      className='menu-item'
+      className='menu-item-col'
       initial='hidden'
       whileInView='visible'
       viewport={{ once: false }}

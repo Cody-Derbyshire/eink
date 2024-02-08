@@ -12,7 +12,8 @@ const Header = ({ page, back, hoveredClass, hoveredEl }) => {
         <motion.div className='prog-bar' style={{ scaleX: scrollYProgress }} />
         <p
           className={`header-name ${
-            hoveredClass === `fl-green-sap-blue-no-border`
+            hoveredClass === 'fl-green-sap-blue' ||
+            hoveredClass === 'fl-green-sap-blue-no-border'
               ? 'sap-blue-text'
               : hoveredClass === 'rad-pink-neon-green' ||
                 hoveredEl === 'dd-text'

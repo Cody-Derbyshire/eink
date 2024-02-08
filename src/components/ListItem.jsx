@@ -4,6 +4,8 @@ import VertFade from '../functions/VertFade';
 import HorFade from '../functions/HorFade';
 import { useState } from 'react';
 import '../assets/colours.css';
+import NumWrapper from './NumWrapper';
+import useModal from '../functions/ModalUtils';
 
 const ListItem = ({
   name,
@@ -15,6 +17,11 @@ const ListItem = ({
   hoverClass,
   hoveredClass,
   setHoveredClass,
+  handleOpenModal,
+  modalNum1,
+  modalNum2,
+  num1,
+  num2,
 }) => {
   return (
     <>
@@ -63,12 +70,23 @@ const ListItem = ({
           </>
         ) : usedFor === 'branding' ? (
           <>
-            <div className='menu-item'>
-              <h1 className='li-item-nohvr smaller-h1'>
-                <div>
-                  <span className='menu-no'>{`0${number}`}</span> {name}
-                </div>
+            <div
+              className={`menu-item-row ${
+                hoveredClass === 'rad-pink-neon-green-no-border'
+                  ? 'no-borders'
+                  : null
+              }`}
+            >
+              <h1 className='li-item-nohvr smaller-h1 '>
+                <span className='menu-no'>{`0${number}`}</span> {name}
               </h1>
+              <NumWrapper
+                handleOpenModal={handleOpenModal}
+                modalNum1={modalNum1}
+                modalNum2={modalNum2}
+                num1={num1}
+                num2={num2}
+              />
             </div>
             <p className='list-desc'>{desc}</p>
           </>

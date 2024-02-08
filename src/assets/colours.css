@@ -73,6 +73,12 @@
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
     border-bottom 0.3s ease-in-out;
 }
+.rad-pink-neon-green-no-border {
+  color: var(--radiant-pink);
+  box-shadow: inset 0 0 0 0 var(--radiant-pink) !important;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-bottom: none;
+}
 .rad-pink-text {
   color: var(--radiant-pink);
   transition: color 0.3s ease-in-out;
@@ -81,10 +87,18 @@
   color: var(--neon-green);
   box-shadow: inset 100vw 0 0 0 var(--radiant-pink) !important;
 }
+.rad-pink-neon-green-no-border:hover {
+  color: var(--neon-green);
+  box-shadow: inset 100vw 0 0 0 var(--radiant-pink) !important;
+}
 
 .neon-green-bg {
   background-color: var(--neon-green);
   transition: background-color 0.3s ease-in-out;
+}
+
+.no-borders {
+  border-color: var(--radiant-pink);
 }
 
 /* -------------------------------------------------- */

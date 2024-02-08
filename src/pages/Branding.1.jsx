@@ -1,18 +1,29 @@
-import '../styles/Branding.css';
 import Header from '../components/Header';
 import images from '../assets/images.json';
 import ListItem from '../components/ListItem';
 import { useState } from 'react';
 import Modal from '../components/Modal';
 import NumWrapper from '../components/NumWrapper';
-import '../assets/colours.css';
-import useModal from '../functions/ModalUtils';
 
-const Branding = () => {
+export const Branding = () => {
   const branding = images.branding;
 
-  const { modalWidths, setModalWidths, closeAllModals, handleOpenModal } =
-    useModal(14);
+  const modalCount = 14;
+
+  const [modalWidths, setModalWidths] = useState(Array(modalCount).fill(0));
+
+  const closeAllModals = () => {
+    setModalWidths(Array(modalCount).fill(0));
+  };
+
+  const handleOpenModal = (index) => {
+    closeAllModals();
+    setModalWidths((prevWidths) =>
+      prevWidths.map((width, i) =>
+        i === index && width === 100 ? 0 : i === index ? 100 : width
+      )
+    );
+  };
 
   const [hoveredClass, setHoveredClass] = useState('');
   const hoverClass = 'rad-pink-neon-green-no-border';
@@ -55,6 +66,8 @@ const Branding = () => {
             hoverClass={hoverBrandClass}
             hoveredClass={hoveredClass}
             setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={0}
             modalNum2={1}
@@ -77,19 +90,7 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'cody derbyshire'}
             number={2}
@@ -98,6 +99,8 @@ const Branding = () => {
             hoverClass={hoverBrandClass}
             hoveredClass={hoveredClass}
             setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={2}
             num1={'03'}
@@ -111,27 +114,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'flammenzauber'}
             number={3}
             usedFor={'branding'}
             desc={branding[3].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={3}
             num1={'04'}
@@ -145,27 +135,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'green grove'}
             number={4}
             usedFor={'branding'}
             desc={branding[4].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={4}
             modalNum2={5}
@@ -187,27 +164,14 @@ const Branding = () => {
           modalWidth={modalWidths[5]}
           closeAllModals={closeAllModals}
         />
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'ept'}
             number={5}
             usedFor={'branding'}
             desc={branding[6].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={6}
             num1={'07'}
@@ -221,27 +185,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'eva mae elliot'}
             number={6}
             usedFor={'branding'}
             desc={branding[7].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={7}
             num1={'08'}
@@ -255,27 +206,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'fwd 2020'}
             number={7}
             usedFor={'branding'}
             desc={branding[8].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={8}
             num1={'09'}
@@ -289,27 +227,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'grace stephenson'}
             number={8}
             usedFor={'branding'}
             desc={branding[9].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={9}
             num1={'10'}
@@ -323,27 +248,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'peony wedding'}
             number={9}
             usedFor={'branding'}
             desc={branding[10].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={10}
             num1={'11'}
@@ -357,27 +269,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={'manifest 2020'}
             number={10}
             usedFor={'branding'}
             desc={branding[11].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={11}
             num1={'12'}
@@ -391,27 +290,14 @@ const Branding = () => {
           closeAllModals={closeAllModals}
         />
 
-        <div
-          className={`list-item-wrapper ${
-            hoveredClass === 'rad-pink-neon-green-no-border'
-              ? 'rad-pink-neon-green-no-border'
-              : null
-          }`}
-          onMouseEnter={() => {
-            setHoveredClass(hoverClass);
-          }}
-          onMouseLeave={() => {
-            setHoveredClass('');
-          }}
-        >
+        <div className='list-item-wrapper'>
           <ListItem
             name={"devils's draught"}
             number={11}
             usedFor={'branding'}
             desc={branding[12].alt}
-            hoverClass={hoverBrandClass}
-            hoveredClass={hoveredClass}
-            setHoveredClass={setHoveredClass}
+          />
+          <NumWrapper
             handleOpenModal={handleOpenModal}
             modalNum1={12}
             num1={'13'}
@@ -437,5 +323,3 @@ const Branding = () => {
     </>
   );
 };
-
-export default Branding;
