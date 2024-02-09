@@ -68,12 +68,81 @@ const ListItem = ({
             </a>
             <p className={`list-desc ${hoveredClass}`}>{desc}</p>
           </>
+        ) : usedFor === 'contact' ? (
+          <>
+            <a
+              href={extLink}
+              target='_blank'
+              rel='noreferrer'
+              className='menu-item'
+              onMouseEnter={() => {
+                setHoveredClass(hoverClass);
+              }}
+              onMouseLeave={() => {
+                setHoveredClass('');
+              }}
+            >
+              <h1 className={`li-item smaller-h1 ${hoveredClass}`}>
+                <div>
+                  <span className='menu-no'>{`0${number}`}</span> {name}
+                  <span className='icon smaller-h1 material-symbols-outlined'>
+                    arrow_outward
+                  </span>
+                </div>
+              </h1>
+            </a>
+            <p className={`list-desc ${hoveredClass}`}>{desc}</p>
+          </>
         ) : usedFor === 'branding' ? (
           <>
             <div
               className={`menu-item-row ${
                 hoveredClass === 'rad-pink-neon-green-no-border'
-                  ? 'no-borders'
+                  ? 'no-borders-pink'
+                  : null
+              }`}
+            >
+              <h1 className='li-item-nohvr smaller-h1 '>
+                <span className='menu-no'>{`0${number}`}</span> {name}
+              </h1>
+              <NumWrapper
+                handleOpenModal={handleOpenModal}
+                modalNum1={modalNum1}
+                modalNum2={modalNum2}
+                num1={num1}
+                num2={num2}
+              />
+            </div>
+            <p className='list-desc'>{desc}</p>
+          </>
+        ) : usedFor === 'furniture' ? (
+          <>
+            <div
+              className={`menu-item-row ${
+                hoveredClass === 'navy-blue-neon-green2-no-border'
+                  ? 'no-borders-neon-green2'
+                  : null
+              }`}
+            >
+              <h1 className='li-item-nohvr smaller-h1 '>
+                <span className='menu-no'>{`0${number}`}</span> {name}
+              </h1>
+              <NumWrapper
+                handleOpenModal={handleOpenModal}
+                modalNum1={modalNum1}
+                modalNum2={modalNum2}
+                num1={num1}
+                num2={num2}
+              />
+            </div>
+            <p className='list-desc'>{desc}</p>
+          </>
+        ) : usedFor === 'products' ? (
+          <>
+            <div
+              className={`menu-item-row ${
+                hoveredClass === 'yellow-dark-yellow-no-border'
+                  ? 'no-borders-dark-yellow'
                   : null
               }`}
             >

@@ -4,192 +4,137 @@ import images from '../assets/images.json';
 import ListItem from '../components/ListItem';
 import { useState } from 'react';
 import RevHorFade from '../functions/RevHorFade';
+import Modal from '../components/Modal';
+import '../assets/colours.css';
+import useModal from '../functions/ModalUtils';
 
 const Products = () => {
   const products = images.products;
 
-  const [modalWidth1, setModalWidth1] = useState(0);
-  const [modalWidth2, setModalWidth2] = useState(0);
-  const [modalWidth3, setModalWidth3] = useState(0);
-  const [modalWidth4, setModalWidth4] = useState(0);
+  const { modalWidths, setModalWidths, closeAllModals, handleOpenModal } =
+    useModal(4);
 
-  const closeAllModals = () => {
-    setModalWidth1(0);
-    setModalWidth2(0);
-    setModalWidth3(0);
-    setModalWidth4(0);
-  };
-
-  const handleOpenModal1 = () => {
-    closeAllModals();
-    modalWidth1 === 100 ? setModalWidth1(0) : setModalWidth1(100);
-  };
-  const handleOpenModal2 = () => {
-    closeAllModals();
-    modalWidth2 === 100 ? setModalWidth2(0) : setModalWidth2(100);
-  };
-  const handleOpenModal3 = () => {
-    closeAllModals();
-    modalWidth3 === 100 ? setModalWidth3(0) : setModalWidth3(100);
-  };
-  const handleOpenModal4 = () => {
-    closeAllModals();
-    modalWidth4 === 100 ? setModalWidth4(0) : setModalWidth4(100);
-  };
+  const [hoveredClass, setHoveredClass] = useState('');
+  const hoverClass = 'yellow-dark-yellow-no-border';
+  const hoverProductClass = 'yellow-dark-yellow-no-border';
 
   return (
     <>
       <div className='overlay'></div>
-      <Header page={'Products'} back={'y'} />
-      <div className='list'>
-        <div className='list-item-wrapper'>
+      <Header
+        page={'Products'}
+        back={'y'}
+        hoveredClass={hoveredClass}
+        setHoveredClass={setHoveredClass}
+      />
+      <div
+        className={`list-vh ${
+          hoveredClass === hoverClass ? 'yellow-bg' : null
+        }`}
+      >
+        <div
+          className={`list-item-wrapper ${
+            hoveredClass === hoverClass ? hoverClass : null
+          }`}
+          onMouseEnter={() => {
+            setHoveredClass(hoverClass);
+          }}
+          onMouseLeave={() => {
+            setHoveredClass('');
+          }}
+        >
           <ListItem
             name={products[0].name}
             number={1}
-            usedFor={'branding'}
+            usedFor={'products'}
             desc={products[0].alt}
+            hoverClass={hoverProductClass}
+            hoveredClass={hoveredClass}
+            setHoveredClass={setHoveredClass}
+            handleOpenModal={handleOpenModal}
+            modalNum1={0}
+            num1={'01'}
+            modalNum2={1}
+            num2={'02'}
           />
-          <RevHorFade>
-            <div className='num-wrapper'>
-              <h1 className='smaller-h1 num-link' onClick={handleOpenModal1}>
-                01
-              </h1>
-              <h1 className='smaller-h1 num-link' onClick={handleOpenModal2}>
-                02
-              </h1>
-            </div>
-          </RevHorFade>
         </div>
-        <div className='modal' style={{ width: `${modalWidth1}%` }}>
-          <img
-            className='modal-img'
-            src={products[0].src}
-            alt={products[0].alt}
-          />
-          {modalWidth1 !== 0 ? (
-            <div className='modal-actions'>
-              <div className='action-wrapper' onClick={closeAllModals}>
-                <h1 className='smaller-h1'>close</h1>
-                <span className='smaller-h1 icon material-symbols-outlined'>
-                  close
-                </span>
-              </div>
-              <a href={products[0].src} target='_blank' rel='noreferrer'>
-                <div className='action-wrapper'>
-                  <h1 className='smaller-h1'>open</h1>
-                  <span className='smaller-h1 icon material-symbols-outlined'>
-                    arrow_outward
-                  </span>
-                </div>
-              </a>
-            </div>
-          ) : null}
-        </div>
-        <div className='modal' style={{ width: `${modalWidth2}%` }}>
-          <img
-            className='modal-img'
-            src={products[1].src}
-            alt={products[1].alt}
-          />
-          {modalWidth2 !== 0 ? (
-            <div className='modal-actions'>
-              <div className='action-wrapper' onClick={closeAllModals}>
-                <h1 className='smaller-h1'>close</h1>
-                <span className='smaller-h1 icon material-symbols-outlined'>
-                  close
-                </span>
-              </div>
-              <a href={products[1].src} target='_blank' rel='noreferrer'>
-                <div className='action-wrapper'>
-                  <h1 className='smaller-h1'>open</h1>
-                  <span className='smaller-h1 icon material-symbols-outlined'>
-                    arrow_outward
-                  </span>
-                </div>
-              </a>
-            </div>
-          ) : null}
-        </div>
-        <div className='list-item-wrapper'>
+        <Modal
+          src={products[0].src}
+          alt={products[0].alt}
+          href={products[0].src}
+          modalWidth={modalWidths[0]}
+          closeAllModals={closeAllModals}
+        />
+        <Modal
+          src={products[1].src}
+          alt={products[1].alt}
+          href={products[1].src}
+          modalWidth={modalWidths[1]}
+          closeAllModals={closeAllModals}
+        />
+        <div
+          className={`list-item-wrapper ${
+            hoveredClass === hoverClass ? hoverClass : null
+          }`}
+          onMouseEnter={() => {
+            setHoveredClass(hoverClass);
+          }}
+          onMouseLeave={() => {
+            setHoveredClass('');
+          }}
+        >
           <ListItem
             name={products[2].name}
             number={2}
-            usedFor={'branding'}
+            usedFor={'products'}
             desc={products[2].alt}
+            hoverClass={hoverProductClass}
+            hoveredClass={hoveredClass}
+            setHoveredClass={setHoveredClass}
+            handleOpenModal={handleOpenModal}
+            modalNum1={2}
+            num1={'03'}
           />
-          <RevHorFade>
-            <div className='num-wrapper'>
-              <h1 className='smaller-h1 num-link' onClick={handleOpenModal3}>
-                03
-              </h1>
-            </div>
-          </RevHorFade>
         </div>
-        <div className='modal' style={{ width: `${modalWidth3}%` }}>
-          <img
-            className='modal-img'
-            src={products[2].src}
-            alt={products[2].alt}
-          />
-          {modalWidth3 !== 0 ? (
-            <div className='modal-actions'>
-              <div className='action-wrapper' onClick={closeAllModals}>
-                <h1 className='smaller-h1'>close</h1>
-                <span className='smaller-h1 icon material-symbols-outlined'>
-                  close
-                </span>
-              </div>
-              <a href={products[2].src} target='_blank' rel='noreferrer'>
-                <div className='action-wrapper'>
-                  <h1 className='smaller-h1'>open</h1>
-                  <span className='smaller-h1 icon material-symbols-outlined'>
-                    arrow_outward
-                  </span>
-                </div>
-              </a>
-            </div>
-          ) : null}
-        </div>
-        <div className='list-item-wrapper'>
+        <Modal
+          src={products[2].src}
+          alt={products[2].alt}
+          href={products[2].src}
+          modalWidth={modalWidths[2]}
+          closeAllModals={closeAllModals}
+        />
+
+        <div
+          className={`list-item-wrapper ${
+            hoveredClass === hoverClass ? hoverClass : null
+          }`}
+          onMouseEnter={() => {
+            setHoveredClass(hoverClass);
+          }}
+          onMouseLeave={() => {
+            setHoveredClass('');
+          }}
+        >
           <ListItem
             name={products[3].name}
-            number={3}
-            usedFor={'branding'}
+            number={4}
+            usedFor={'products'}
             desc={products[3].alt}
+            hoverClass={hoverProductClass}
+            hoveredClass={hoveredClass}
+            setHoveredClass={setHoveredClass}
+            handleOpenModal={handleOpenModal}
+            modalNum1={3}
+            num1={'04'}
           />
-          <RevHorFade>
-            <div className='num-wrapper'>
-              <h1 className='smaller-h1 num-link' onClick={handleOpenModal4}>
-                04
-              </h1>
-            </div>
-          </RevHorFade>
         </div>
-        <div className='modal' style={{ width: `${modalWidth4}%` }}>
-          <img
-            className='modal-img'
-            src={products[3].src}
-            alt={products[3].alt}
-          />
-          {modalWidth4 !== 0 ? (
-            <div className='modal-actions'>
-              <div className='action-wrapper' onClick={closeAllModals}>
-                <h1 className='smaller-h1'>close</h1>
-                <span className='smaller-h1 icon material-symbols-outlined'>
-                  close
-                </span>
-              </div>
-              <a href={products[3].src} target='_blank' rel='noreferrer'>
-                <div className='action-wrapper'>
-                  <h1 className='smaller-h1'>open</h1>
-                  <span className='smaller-h1 icon material-symbols-outlined'>
-                    arrow_outward
-                  </span>
-                </div>
-              </a>
-            </div>
-          ) : null}
-        </div>
+        <Modal
+          src={products[3].src}
+          alt={products[3].alt}
+          href={products[3].src}
+          modalWidth={modalWidths[3]}
+          closeAllModals={closeAllModals}
+        />
       </div>
     </>
   );

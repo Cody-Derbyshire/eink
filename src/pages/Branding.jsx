@@ -4,7 +4,6 @@ import images from '../assets/images.json';
 import ListItem from '../components/ListItem';
 import { useState } from 'react';
 import Modal from '../components/Modal';
-import NumWrapper from '../components/NumWrapper';
 import '../assets/colours.css';
 import useModal from '../functions/ModalUtils';
 
@@ -29,9 +28,7 @@ const Branding = () => {
       />
       <div
         className={`list ${
-          hoveredClass === `rad-pink-neon-green-no-border`
-            ? 'neon-green-bg'
-            : null
+          hoveredClass === hoverClass ? 'neon-green-bg' : null
         }`}
       >
         <div

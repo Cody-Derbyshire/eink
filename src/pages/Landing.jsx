@@ -121,11 +121,13 @@ function Landing() {
             </h1>
           </HorFade>
           <VertFade>
-            <img
-              className={`hero-img`}
-              src={stillme}
-              alt='cody derbyshire hero image'
-            />
+            <div className='flex-end'>
+              <img
+                className={`hero-img`}
+                src={stillme}
+                alt='cody derbyshire hero image'
+              />
+            </div>
           </VertFade>
           {isDesktop ? (
             <div className='dd-wrapper '>
@@ -256,7 +258,7 @@ function Landing() {
                       : null
                   }`}
                 >
-                  &darr;
+                  <a href='#list-landing'>&darr;</a>
                 </h1>
               </motion.div>
             </div>
@@ -265,7 +267,8 @@ function Landing() {
       </div>
 
       <div
-        className={`list 
+        id='list-landing'
+        className={`list-vh 
         ${
           hoveredClass === `fl-green-sap-blue`
             ? 'fl-green-bg'

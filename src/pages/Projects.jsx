@@ -44,7 +44,7 @@ const Projects = () => {
         setHoveredClass={setHoveredClass}
       />
       <div
-        className={`list ${
+        className={`list-vh ${
           hoveredClass === `fl-green-sap-blue-no-border` ? 'fl-green-bg' : null
         }`}
       >
