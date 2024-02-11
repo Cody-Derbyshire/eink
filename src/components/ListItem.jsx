@@ -37,7 +37,7 @@ const ListItem = ({
               setHoveredClass('');
             }}
           >
-            <h1 className={`li-item ${hoveredClass}`}>
+            <h1 className={`li-item-landing ${hoveredClass}`}>
               <div>
                 <span className='menu-no'>{`0${number}`}</span> {name}
               </div>

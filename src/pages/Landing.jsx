@@ -6,16 +6,13 @@ import VertFade from '../functions/VertFade';
 import HorFade from '../functions/HorFade';
 import RevVertFade from '../functions/RevVertFade';
 import { useState, useEffect } from 'react';
+import remToPixels from '../functions/remToPixels';
 
 const me = './src/assets/images/me.jpg';
 const alsome = './src/assets/images/also-me.jpg';
 const stillme = './images/still-me.jpg';
 
 function Landing() {
-  const remToPixels = (rem) => {
-    return rem * 16;
-  };
-
   const [isDesktop, setDesktop] = useState(window.innerWidth > remToPixels(80));
   const [isTablet, setTablet] = useState(window.innerWidth > remToPixels(35));
   const [isMobile, setMobile] = useState(window.innerWidth < remToPixels(35));

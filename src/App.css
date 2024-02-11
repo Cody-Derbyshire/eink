@@ -70,16 +70,6 @@ h1 {
   width: min-content;
 }
 
-.prog-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background-color: black;
-  transform-origin: 0%;
-}
-
 .list {
   height: 100%;
   display: flex;

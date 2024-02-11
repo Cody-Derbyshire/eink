@@ -33,6 +33,24 @@
 
 /* -------------------------------------------------- */
 
+.bar-sap-blue {
+  background-color: var(--sapphire-blue) !important;
+}
+.bar-rad-pink {
+  background-color: var(--radiant-pink) !important;
+}
+.bar-neon-green {
+  background-color: var(--neon-green-2) !important;
+}
+.bar-dark-yellow {
+  background-color: var(--dark-yellow) !important;
+}
+.bar-dark-pink {
+  background-color: var(--dark-pink) !important;
+}
+
+/* -------------------------------------------------- */
+
 .fl-green-sap-blue {
   color: var(--sapphire-blue);
   border-bottom: 0.2rem solid var(--sapphire-blue) !important;
@@ -98,7 +116,7 @@
 }
 
 .no-borders-pink {
-  border-color: var(--radiant-pink);
+  border-color: var(--radiant-pink) !important;
 }
 
 /* -------------------------------------------------- */
