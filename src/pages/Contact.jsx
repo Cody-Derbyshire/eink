@@ -9,7 +9,7 @@ const cdcv = './CD-CV-2024.pdf';
 
 const Contact = () => {
   const [hoveredClass, setHoveredClass] = useState('');
-  const hoveredContactClass = 'pink-dark-pink-no-border';
+  const hoveredContactClass = 'pink-dark-pink';
 
   const CVDownload = () => {
     return (

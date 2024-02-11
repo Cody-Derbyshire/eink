@@ -31,6 +31,10 @@
   gap: 1rem;
 }
 
+.border-bottom-none {
+  border-bottom: none !important;
+}
+
 .menu-item {
   display: flex;
   flex-direction: row;

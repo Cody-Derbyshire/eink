@@ -91,7 +91,9 @@ const ListItem = ({
                 </div>
               </h1>
             </a>
-            <p className={`list-desc ${hoveredClass}`}>{desc}</p>
+            <p className={`list-desc border-bottom-none ${hoveredClass}`}>
+              {desc}
+            </p>
           </>
         ) : usedFor === 'branding' ? (
           <>

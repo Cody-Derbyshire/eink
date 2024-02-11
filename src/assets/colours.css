@@ -179,7 +179,7 @@
 
 .pink-dark-pink {
   color: var(--dark-pink);
-  border-bottom: 0.2rem solid var(--dark-pink) !important;
+  border-bottom: 0.2rem solid var(--dark-pink);
   box-shadow: inset 0 0 0 0 var(--dark-pink) !important;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
     border-bottom 0.3s ease-in-out;
