@@ -8,6 +8,7 @@ import Modal from '../components/Modal';
 import '../assets/colours.css';
 import useModal from '../functions/ModalUtils';
 import remToPixels from '../functions/remToPixels';
+import '../styles/hover.css';
 
 const Products = () => {
   const products = images.products;
@@ -47,7 +48,7 @@ const Products = () => {
         <div className='list-vh yellow-bg dark-yellow-text'>
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverClass ? hoverClass : null
+              hoveredClass === hoverClass ? `${hoverProductClass} ` : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -87,7 +88,7 @@ const Products = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverClass ? hoverClass : null
+              hoveredClass === hoverClass ? `${hoverProductClass} ` : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -157,7 +158,9 @@ const Products = () => {
         >
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverClass ? hoverClass : null
+              hoveredClass === hoverClass
+                ? `${hoverProductClass} cursor-hover-macropad`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -197,7 +200,9 @@ const Products = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverClass ? hoverClass : null
+              hoveredClass === hoverClass
+                ? `${hoverProductClass} cursor-hover-walker1`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -229,7 +234,9 @@ const Products = () => {
 
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverClass ? hoverClass : null
+              hoveredClass === hoverClass
+                ? `${hoverProductClass} cursor-hover-walker2`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);

@@ -40,6 +40,10 @@
   cursor: pointer;
 }
 
+.cursor-hover-1 {
+  cursor: url(https://i.ibb.co/1zQYBJk/me-smaller.jpg), pointer;
+}
+
 @media screen and (min-width: 35rem) {
   .modal-img {
     width: 50%;

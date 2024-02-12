@@ -7,12 +7,13 @@ import Modal from '../components/Modal';
 import '../assets/colours.css';
 import useModal from '../functions/ModalUtils';
 import remToPixels from '../functions/remToPixels';
+import '../styles/hover.css';
 
 const Branding = () => {
   const branding = images.branding;
 
   const { modalWidths, setModalWidths, closeAllModals, handleOpenModal } =
-    useModal(14);
+    useModal(15);
 
   const [hoveredClass, setHoveredClass] = useState('');
   const hoverClass = 'rad-pink-neon-green-no-border';
@@ -453,7 +454,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-scale'
                 : null
             }`}
             onMouseEnter={() => {
@@ -496,7 +497,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-cdbranding'
                 : null
             }`}
             onMouseEnter={() => {
@@ -530,7 +531,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-flammen'
                 : null
             }`}
             onMouseEnter={() => {
@@ -564,7 +565,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-greengrove'
                 : null
             }`}
             onMouseEnter={() => {
@@ -606,7 +607,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-ept'
                 : null
             }`}
             onMouseEnter={() => {
@@ -640,7 +641,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-eva'
                 : null
             }`}
             onMouseEnter={() => {
@@ -674,7 +675,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-fwd'
                 : null
             }`}
             onMouseEnter={() => {
@@ -708,7 +709,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-grace'
                 : null
             }`}
             onMouseEnter={() => {
@@ -742,7 +743,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-wedding'
                 : null
             }`}
             onMouseEnter={() => {
@@ -776,7 +777,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-manifest'
                 : null
             }`}
             onMouseEnter={() => {
@@ -810,7 +811,7 @@ const Branding = () => {
           <div
             className={`list-item-wrapper ${
               hoveredClass === 'rad-pink-neon-green-no-border'
-                ? 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-devils'
                 : null
             }`}
             onMouseEnter={() => {
@@ -847,6 +848,40 @@ const Branding = () => {
             alt={branding[13].alt}
             href={branding[13].src}
             modalWidth={modalWidths[13]}
+            closeAllModals={closeAllModals}
+          />
+
+          <div
+            className={`list-item-wrapper ${
+              hoveredClass === 'rad-pink-neon-green-no-border'
+                ? 'rad-pink-neon-green-no-border cursor-hover-bgf'
+                : null
+            }`}
+            onMouseEnter={() => {
+              setHoveredClass(hoverClass);
+            }}
+            onMouseLeave={() => {
+              setHoveredClass('');
+            }}
+          >
+            <ListItem
+              name={'black garlic furniture'}
+              number={12}
+              usedFor={'branding'}
+              desc={branding[14].alt}
+              hoverClass={hoverBrandClass}
+              hoveredClass={hoveredClass}
+              setHoveredClass={setHoveredClass}
+              handleOpenModal={handleOpenModal}
+              modalNum1={14}
+              num1={'15'}
+            />
+          </div>
+          <Modal
+            src={branding[14].src}
+            alt={branding[14].alt}
+            href={branding[14].src}
+            modalWidth={modalWidths[14]}
             closeAllModals={closeAllModals}
           />
         </div>

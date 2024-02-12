@@ -8,6 +8,7 @@ import '../assets/colours.css';
 import useModal from '../functions/ModalUtils';
 import Modal from '../components/Modal';
 import remToPixels from '../functions/remToPixels';
+import '../styles/hover.css';
 
 const Furniture = () => {
   const furniture = images.furniture;
@@ -209,7 +210,9 @@ const Furniture = () => {
         >
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverFurnitureClass ? hoverFurnitureClass : null
+              hoveredClass === hoverFurnitureClass
+                ? `${hoverFurnitureClass} cursor-hover-chair`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -240,7 +243,9 @@ const Furniture = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverFurnitureClass ? hoverFurnitureClass : null
+              hoveredClass === hoverFurnitureClass
+                ? `${hoverFurnitureClass} cursor-hover-bedside`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -271,7 +276,9 @@ const Furniture = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverFurnitureClass ? hoverFurnitureClass : null
+              hoveredClass === hoverFurnitureClass
+                ? `${hoverFurnitureClass} cursor-hover-couch`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -302,7 +309,9 @@ const Furniture = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverFurnitureClass ? hoverFurnitureClass : null
+              hoveredClass === hoverFurnitureClass
+                ? `${hoverFurnitureClass} cursor-hover-kumiko`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
@@ -333,7 +342,9 @@ const Furniture = () => {
           />
           <div
             className={`list-item-wrapper ${
-              hoveredClass === hoverFurnitureClass ? hoverFurnitureClass : null
+              hoveredClass === hoverFurnitureClass
+                ? `${hoverFurnitureClass} cursor-hover-record`
+                : null
             }`}
             onMouseEnter={() => {
               setHoveredClass(hoverClass);
